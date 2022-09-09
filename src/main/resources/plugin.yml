@@ -1,0 +1,9 @@
+name: ReJoinMessage
+version: '${project.version}'
+main: rejoinmessage.rejoinmessage.ReJoinMessage
+api-version: 1.19
+authors: [ SakakiAruka ]
+description: join message returns.
+commands:
+  joinmessagereload:
+    permission: joinmessage.reload

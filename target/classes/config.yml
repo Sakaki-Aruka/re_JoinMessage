@@ -1,0 +1,33 @@
+# this file is a config file.
+
+actions: 5
+playerNameList: ""
+
+action1:
+  type: "command"
+  message: "Welcome to this server !!!"
+  color: ""
+  command: "/say hello world"
+
+action2:
+  type: "url"
+  message: "click and jump to a website that is this servers."
+  color: ""
+  url: "https://sites.google.com/view/mc-publicserver"
+
+action3:
+  type: "clipboard"
+  message: "click and copy the messages."
+  color: ""
+  copy: "thank you to click this message!"
+
+action4:
+  type: "suggest_command"
+  message: "click and suggest a command!"
+  color: ""
+  suggest: "/say hello everyone! I'm !ppp!. Nice to meet you!"
+
+action5:
+  type: "normal"
+  message: "this is a normal message."
+  color: ""
