@@ -22,3 +22,7 @@ example):
 ↓  
 type: url  
 url: "https://google.com"  
+# Command. 
+## /joinmessagereload   
+Only for administrator.(have to have permission "joinmessage.reload")  
+Reload this plugins config.yml
