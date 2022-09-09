@@ -6,6 +6,8 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.Map;
+
 import static rejoinmessage.rejoinmessage.SettingsLoad.commands;
 
 public final class ReJoinMessage extends JavaPlugin implements CommandExecutor {
@@ -18,6 +20,7 @@ public final class ReJoinMessage extends JavaPlugin implements CommandExecutor {
     @Override
     public void onEnable() {
         this.load();
+        saveDefaultConfig();
         getServer().getPluginManager().registerEvents(new Events(),this);
         getCommand("joinmessagereload");
     }
@@ -31,7 +34,10 @@ public final class ReJoinMessage extends JavaPlugin implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command,String label,String[] args){
         sender.sendMessage("§eNow reloading.(re-JoinMessage plugin)");
         this.load();
-        sender.sendMessage("load info\n:"+commands);
+        sender.sendMessage("load info:");
+        for(Map.Entry<Integer,String> entry : commands.entrySet()){
+            sender.sendMessage(entry.getValue());
+        }
         sender.sendMessage("§aReload finished.(re-JoinMessage plugin)");
         return true;
     }

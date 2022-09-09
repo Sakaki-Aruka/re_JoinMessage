@@ -14,15 +14,14 @@ public class SettingsLoad {
     }
 
     public static int actions;
-    public static final String commandTemplate = "/tellraw !ppp! {\"text\":\"!ttt!\",\"color\":\"!ccc!\",\"clickEvent\":{\"action\":\"!aaa!\",\"value\":\"!vvv!\"}}";
     public static Map<Integer,String> commands = new HashMap<>();
 
     public String replace(String chat,String type,String value,String color){
-        String returnTo = commandTemplate;
-        returnTo.replace("!ttt!",chat);
-        returnTo.replace("!aaa!",type);
-        returnTo.replace("!vvv!",value);
-        returnTo.replace("ccc",color);
+        String returnTo = "/tellraw !ppp! {\"text\":\"!ttt!\",\"color\":\"!ccc!\",\"clickEvent\":{\"action\":\"!aaa!\",\"value\":\"!vvv!\"}}";
+        returnTo = returnTo.replace("!ttt!",chat);
+        returnTo = returnTo.replace("!aaa!",type);
+        returnTo = returnTo.replace("!vvv!",value);
+        returnTo = returnTo.replace("!ccc!",color);
         return returnTo;
     }
 
