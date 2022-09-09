@@ -1,7 +1,6 @@
 # this file is a config file.
 
 actions: 5
-playerNameList: ""
 
 action1:
   type: "command"

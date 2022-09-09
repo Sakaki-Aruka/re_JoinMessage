@@ -19,9 +19,6 @@ public class Scheduler extends BukkitRunnable {
             command =command.replace("!ppp!",name);
 
             Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(),command);
-
-            //debug
-            System.out.println("command:"+command);
         }
         nameArr.remove(0);
         cancel();
